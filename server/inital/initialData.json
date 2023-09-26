@@ -1,0 +1,25 @@
+{
+"users": [
+    {
+    "name": {
+        "first": "Zvi",
+        "middle": "ThemWhiskers",
+        "last": "Komsky"
+        },
+    "isBusiness": true,
+    "phone": "0546666666",
+    "email": "themwhiskers@gmail.com",
+    "password": "Admin123456",
+    "address": {
+        "state": "tzafon (north district)",
+        "country": "Israel",
+        "city": "haifa",
+        "street": "made-up street",
+        "houseNumber": "5"
+        },
+    "image": {
+        "url": "https://mir-s3-cdn-cf.behance.net/user/276/96d8873814423.5a3815270772f.jpg",
+        "alt": "Zvi Komsky - full stack developer"
+        }}
+    ]
+}

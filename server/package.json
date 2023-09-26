@@ -4,7 +4,9 @@
   "description": "Zvi Komsky's backend final project",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ."
   },
   "author": "Zvi Komsky",
   "license": "ISC",
@@ -13,6 +15,7 @@
   },
   "dependencies": {
     "chalk": "^4.1.1",
+    "cors": "^2.8.5",
     "express": "^4.18.2"
   }
 }
