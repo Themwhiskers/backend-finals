@@ -24,24 +24,65 @@
     ],
 "cards": [
     {
-        "title": "Zvi's card app",
-        "subtitle": "my cool card app for hackeru campus",
-        "description": "not too original right now",
-        "phone": "054-6676677",
-        "email": "lolcomp@gmail.com",
-        "web": "https://www.zvikdesigns.co.il",
+        "title": "first card",
+        "subtitle": "first subtitle",
+        "description": "first description",
+        "phone": "054-6676671",
+        "email": "first@gmail.com",
+        "web": "https://www.first.co.il",
         "image": {
             "url": "",
             "alt": ""
         },
         "address": {
-            "state": "somewhere",
+            "state": "first state",
             "country": "Israel",
-            "city": "haifa",
-            "street": "harta valley",
-            "houseNumber": 4,
+            "city": "first city",
+            "street": "first street",
+            "houseNumber": "1",
             "zip": "1111"
         }
+    },
+    {
+        "title": "second card",
+        "subtitle": "second subtitle",
+        "description": "second description",
+        "phone": "054-6676671",
+        "email": "second@gmail.com",
+        "web": "https://www.second.co.il",
+        "image": {
+            "url": "",
+            "alt": ""
+        },
+        "address": {
+            "state": "second state",
+            "country": "Israel",
+            "city": "second city",
+            "street": "second street",
+            "houseNumber": "2",
+            "zip": "2222"
+        }
+    },
+    {
+        "title": "third card",
+        "subtitle": "third subtitle",
+        "description": "third description",
+        "phone": "054-6676671",
+        "email": "third@gmail.com",
+        "web": "https://www.third.co.il",
+        "image": {
+            "url": "",
+            "alt": ""
+        },
+        "address": {
+            "state": "third state",
+            "country": "Israel",
+            "city": "third city",
+            "street": "third street",
+            "houseNumber": "3",
+            "zip": "3333"
+        }
     }
+
 ]
 }
