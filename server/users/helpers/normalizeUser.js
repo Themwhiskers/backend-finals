@@ -1,23 +1,27 @@
 const normalizeUser = rawUser => {
-    const name = {
-        ...rawUser.name,
-        middle: rawUser.name.middle || '',
-    };
-    const address = {
-        ...rawUser.address,
-        state: rawUser.address.state || 'Unavailable',
-    };
+    const name = { ...rawUser.name, middle: rawUser.name.middle || "" };
+  
     const image = {
-        ...rawUser.image,
-        url: rawUser.image.url || 'https://cdn5.vectorstock.com/i/1000x1000/43/94/default-avatar-photo-placeholder-icon-grey-vector-38594394.jpg',
-        alt: rawUser.image.alt || 'No accessibility data available',
+      ...rawUser.image,
+      url:
+        rawUser.image.url ||
+        "https://cdn.pixabay.com/photo/2016/04/01/10/11/avatar-1299805_960_720.png",
+      alt: rawUser.image.alt || "Business card image",
     };
+  
+    const address = {
+      ...rawUser.address,
+      state: rawUser.address.state || "not defined",
+    };
+  
     const user = {
-        ...rawUser,
-        name,
-        address,
-        image,
+      ...rawUser,
+      name,
+      image,
+      address,
     };
-};
-
-module.exports = normalizeUser;
+  
+    return user;
+  };
+  
+  module.exports = normalizeUser;

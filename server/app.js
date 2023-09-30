@@ -1,16 +1,32 @@
-const express = require('express');
-const chalk = require('chalk');
-const cors = require('cors');
-const { generateInitialUsers } = require('./inital/initialDataService');
-
+const chalk = require("chalk");
+const express = require("express");
 const app = express();
+const { handleError } = require("./utils/handleErrors");
+const router = require("./router/router");
+const cors = require("./middlewares/cors");
+const logger = require("./logger/loggerService");
+const connectToDb = require("./db/dbService");
+const config = require("config");
+const {
+  generateInitialCards,
+  generateInitialUsers,
+} = require("./initial/initialDataService");
 
 app.use(cors);
+app.use(logger);
 app.use(express.json());
+app.use(express.static("./public"));
+app.use(router);
 
-const PORT = 8181;
+app.use((err, req, res, next) => {
+  handleError(res, 500, err.message);
+});
+
+const PORT = config.get("PORT");
 
 app.listen(PORT, () => {
-    console.log(chalk.bgGreenBright.white(`Business Card App is LIVE at: http://localhost:${PORT}`));
-    generateInitialUsers();
-})
+  console.log(chalk.blueBright(`Listening on: http://localhost:${PORT}`));
+  connectToDb();
+  generateInitialCards();
+  generateInitialUsers();
+});
